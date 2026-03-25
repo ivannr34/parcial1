@@ -1,0 +1,72 @@
+DOCUMENTO DE CONFIGURACIÓN DE BASE DE DATOS
+Proyecto: Sumo - Primer Parcial
+Programa: Ingeniería de Sistemas
+Asignatura: Programación Avanzada
+
+1. Nombre de la base de datos
+La base de datos utilizada para el proyecto se llama:
+
+sumo_parcial1
+
+2. Gestor de base de datos
+El sistema gestor de base de datos utilizado es:
+
+MySQL
+Interfaz de administración: phpMyAdmin
+
+3. Versión sugerida
+Se recomienda utilizar una versión estable de MySQL compatible con JDBC, por ejemplo:
+
+MySQL 8.x
+
+4. Archivo de script SQL
+El script de creación e inserción de datos debe ubicarse en la carpeta:
+
+Specs
+
+Nombre sugerido del archivo:
+
+sumo_parcial1.sql
+
+5. Archivo de propiedades de conexión
+La configuración de conexión a la base de datos debe estar ubicada en la carpeta:
+
+data
+
+Nombre sugerido del archivo:
+
+db.properties
+
+Contenido sugerido del archivo db.properties:
+
+db.url=jdbc:mysql://localhost:3306/sumo_parcial1?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+db.usuario=root
+db.password=
+db.driver=com.mysql.cj.jdbc.Driver
+
+6. Ruta de acceso desde el proyecto
+La estructura recomendada del proyecto es:
+
+data/db.properties
+data/kimarites.properties
+data/combates.raf
+Specs/sumo_parcial1.sql
+
+7. Proceso para importar la base de datos
+1. Abrir phpMyAdmin.
+2. Crear o seleccionar el servidor MySQL.
+3. Abrir la pestaña SQL.
+4. Copiar y ejecutar el contenido del archivo sumo_parcial1.sql.
+5. Verificar que se cree la base de datos sumo_parcial1.
+6. Comprobar que se haya creado la tabla luchador.
+7. Verificar que existan los registros iniciales de prueba.
+
+8. Observaciones importantes
+- La conexión a la base de datos debe leerse desde el archivo db.properties.
+- El proyecto no debe tener las credenciales quemadas directamente en el código.
+- La base de datos debe existir antes de ejecutar la aplicación.
+- La carpeta data debe existir para que el sistema pueda leer las propiedades y generar el archivo combates.raf.
+- El archivo combates.raf puede ser creado automáticamente por la aplicación si no existe.
+
+9. Responsable de la configuración
+Este documento hace parte de la entrega del proyecto y debe ubicarse en la carpeta Docs o Specs, según la organización acordada por el grupo.
